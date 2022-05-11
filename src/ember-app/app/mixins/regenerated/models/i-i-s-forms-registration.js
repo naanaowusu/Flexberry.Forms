@@ -46,11 +46,11 @@ export let defineProjections = function (modelClass) {
     courseType: attr('Course type', { index: 0 }),
     dateOfRegister: attr('Date of register', { index: 1 }),
     course: belongsTo('i-i-s-forms-course', '', {
-      name: attr('', { index: 2 })
-    }, { index: -1, hidden: true }),
+
+    }, { index: 2, displayMemberPath: 'name' }),
     student: belongsTo('i-i-s-forms-student', '', {
-      name: attr('', { index: 3 })
-    }, { index: -1, hidden: true })
+
+    }, { index: 3, displayMemberPath: 'name' })
   });
 
   modelClass.defineProjection('RegistrationL', 'i-i-s-forms-registration', {

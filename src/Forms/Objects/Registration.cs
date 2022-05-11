@@ -31,8 +31,10 @@ namespace IIS.Forms
     [View("RegistrationE", new string[] {
             "CourseType as \'Course type\'",
             "DateOfRegister as \'Date of register\'",
-            "Course.Name",
-            "Student.Name"})]
+            "Course",
+            "Student"})]
+    [MasterViewDefineAttribute("RegistrationE", "Course", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Name")]
+    [MasterViewDefineAttribute("RegistrationE", "Student", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Name")]
     [View("RegistrationL", new string[] {
             "CourseType as \'Course type\'",
             "DateOfRegister as \'Date of register\'",

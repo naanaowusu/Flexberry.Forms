@@ -62,42 +62,28 @@
       ],
       "belongsTo": [
         {
-          "lookupValue": null,
-          "lookupValueField": null,
+          "lookupValue": "Name",
+          "lookupValueField": "name",
           "relationName": "Course",
           "belongsTo": [],
           "hidden": false,
-          "attrs": [
-            {
-              "name": "name",
-              "caption": "",
-              "hidden": false,
-              "index": 2
-            }
-          ],
-          "index": -1,
-          "type": "default",
+          "attrs": [],
+          "index": 2,
+          "type": "standard",
           "caption": "",
           "name": "course",
           "relatedTo": "i-i-s-forms-course",
           "inverse": null
         },
         {
-          "lookupValue": null,
-          "lookupValueField": null,
+          "lookupValue": "Name",
+          "lookupValueField": "name",
           "relationName": "Student",
           "belongsTo": [],
           "hidden": false,
-          "attrs": [
-            {
-              "name": "name",
-              "caption": "",
-              "hidden": false,
-              "index": 3
-            }
-          ],
-          "index": -1,
-          "type": "default",
+          "attrs": [],
+          "index": 3,
+          "type": "standard",
           "caption": "",
           "name": "student",
           "relatedTo": "i-i-s-forms-student",

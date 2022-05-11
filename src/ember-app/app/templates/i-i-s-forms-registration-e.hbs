@@ -46,23 +46,39 @@
     {{flexberry-validationmessage error=(v-get validationModel "dateOfRegister" "message")}}
   </div>
   <div class="field">
-    {{flexberry-field
-      readonly=true
-      value=model.course.name
-      class=(if (v-get validationModel.course "name" "isInvalid") "error")
-      label=(t "forms.i-i-s-forms-registration-e.course.name-caption")
-      data-test-i-i-s-forms-registration-e-course-name=true
+    <label>{{t "forms.i-i-s-forms-registration-e.course-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.course
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="course"
+      projection="CourseL"
+      title=(t "forms.i-i-s-forms-registration-e.course-caption")
+      readonly=readonly
+      componentName="courseLookup"
+      class=(if (v-get validationModel "course" "isInvalid") "error")
+      data-test-i-i-s-forms-registration-e-course=true
     }}
-    {{flexberry-validationmessage error=(v-get validationModel.course "name" "message")}}
+    {{flexberry-validationmessage error=(v-get validationModel "course" "message")}}
   </div>
   <div class="field">
-    {{flexberry-field
-      readonly=true
-      value=model.student.name
-      class=(if (v-get validationModel.student "name" "isInvalid") "error")
-      label=(t "forms.i-i-s-forms-registration-e.student.name-caption")
-      data-test-i-i-s-forms-registration-e-student-name=true
+    <label>{{t "forms.i-i-s-forms-registration-e.student-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.student
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="student"
+      projection="StudentL"
+      title=(t "forms.i-i-s-forms-registration-e.student-caption")
+      readonly=readonly
+      componentName="studentLookup"
+      class=(if (v-get validationModel "student" "isInvalid") "error")
+      data-test-i-i-s-forms-registration-e-student=true
     }}
-    {{flexberry-validationmessage error=(v-get validationModel.student "name" "message")}}
+    {{flexberry-validationmessage error=(v-get validationModel "student" "message")}}
   </div>
 </form>
