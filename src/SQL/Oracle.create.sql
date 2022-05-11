@@ -15,8 +15,6 @@ CREATE TABLE "Student"
 
 	"Gender" NVARCHAR2(6) NULL,
 
-	"Registration_m0" RAW(16) NOT NULL,
-
 	 PRIMARY KEY ("primaryKey")
 ) ;
 
@@ -27,8 +25,6 @@ CREATE TABLE "Course"
 	"primaryKey" RAW(16) NOT NULL,
 
 	"Name" NVARCHAR2(255) NULL,
-
-	"Registration_m0" RAW(16) NOT NULL,
 
 	 PRIMARY KEY ("primaryKey")
 ) ;
@@ -42,6 +38,10 @@ CREATE TABLE "Registration"
 	"CourseType" NVARCHAR2(18) NULL,
 
 	"DateOfRegister" DATE NULL,
+
+	"Course_m0" RAW(16) NOT NULL,
+
+	"Student_m0" RAW(16) NOT NULL,
 
 	 PRIMARY KEY ("primaryKey")
 ) ;
@@ -245,15 +245,15 @@ CREATE TABLE "ApplicationLog"
 
 
 
-ALTER TABLE "Student"
-	ADD CONSTRAINT "Student_FRegistration_0" FOREIGN KEY ("Registration_m0") REFERENCES "Registration" ("primaryKey");
+ALTER TABLE "Registration"
+	ADD CONSTRAINT "Registration_FCourse_0" FOREIGN KEY ("Course_m0") REFERENCES "Course" ("primaryKey");
 
-CREATE INDEX "Student_IRegistration_m0" on "Student" ("Registration_m0");
+CREATE INDEX "Registration_ICourse_m0" on "Registration" ("Course_m0");
 
-ALTER TABLE "Course"
-	ADD CONSTRAINT "Course_FRegistration_0" FOREIGN KEY ("Registration_m0") REFERENCES "Registration" ("primaryKey");
+ALTER TABLE "Registration"
+	ADD CONSTRAINT "Registration_FStudent_0" FOREIGN KEY ("Student_m0") REFERENCES "Student" ("primaryKey");
 
-CREATE INDEX "Course_IRegistration_m0" on "Course" ("Registration_m0");
+CREATE INDEX "Registration_IStudent_m0" on "Registration" ("Student_m0");
 
 ALTER TABLE "STORMWEBSEARCH"
 	ADD CONSTRAINT "STORMWEBSEARCH_FSTORMFILT_6521" FOREIGN KEY ("FilterSetting_m0") REFERENCES "STORMFILTERSETTING" ("primaryKey");

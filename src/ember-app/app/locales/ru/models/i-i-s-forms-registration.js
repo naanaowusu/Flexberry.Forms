@@ -6,6 +6,18 @@ export default {
       },
       dateOfRegister: {
         __caption__: 'Date of register'
+      },
+      course: {
+        __caption__: '',
+        name: {
+          __caption__: ''
+        }
+      },
+      student: {
+        __caption__: '',
+        name: {
+          __caption__: ''
+        }
       }
     },
     RegistrationL: {
@@ -14,6 +26,18 @@ export default {
       },
       dateOfRegister: {
         __caption__: 'Date of register'
+      },
+      course: {
+        __caption__: 'Course',
+        name: {
+          __caption__: 'Course'
+        }
+      },
+      student: {
+        __caption__: 'Student',
+        name: {
+          __caption__: 'Student'
+        }
       }
     }
   },
@@ -23,6 +47,12 @@ export default {
     },
     dateOfRegister: {
       __caption__: 'Date of register'
+    },
+    course: {
+      __caption__: 'course'
+    },
+    student: {
+      __caption__: 'student'
     }
   }
 };

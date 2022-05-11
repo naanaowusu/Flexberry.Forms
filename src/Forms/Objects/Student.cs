@@ -33,17 +33,12 @@ namespace IIS.Forms
             "Name as \'Name\'",
             "Surname as \'Surname\'",
             "Age as \'Age\'",
-            "Gender as \'Gender\'",
-            "Registration as \'Registration\'",
-            "Registration.CourseType as \'Course type\'"}, Hidden=new string[] {
-            "Registration.CourseType"})]
-    [MasterViewDefineAttribute("StudentE", "Registration", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "CourseType")]
+            "Gender as \'Gender\'"})]
     [View("StudentL", new string[] {
             "Name as \'Name\'",
             "Surname as \'Surname\'",
             "Age as \'Age\'",
-            "Gender as \'Gender\'",
-            "Registration.CourseType as \'Course type\'"})]
+            "Gender as \'Gender\'"})]
     public class Student : ICSSoft.STORMNET.DataObject
     {
         
@@ -54,8 +49,6 @@ namespace IIS.Forms
         private int fAge;
         
         private IIS.Forms.tGender fGender;
-        
-        private IIS.Forms.Registration fRegistration;
         
         // *** Start programmer edit section *** (Student CustomMembers)
 
@@ -185,38 +178,6 @@ namespace IIS.Forms
                 // *** Start programmer edit section *** (Student.Gender Set end)
 
                 // *** End programmer edit section *** (Student.Gender Set end)
-            }
-        }
-        
-        /// <summary>
-        /// Student.
-        /// </summary>
-        // *** Start programmer edit section *** (Student.Registration CustomAttributes)
-
-        // *** End programmer edit section *** (Student.Registration CustomAttributes)
-        [NotNull()]
-        public virtual IIS.Forms.Registration Registration
-        {
-            get
-            {
-                // *** Start programmer edit section *** (Student.Registration Get start)
-
-                // *** End programmer edit section *** (Student.Registration Get start)
-                IIS.Forms.Registration result = this.fRegistration;
-                // *** Start programmer edit section *** (Student.Registration Get end)
-
-                // *** End programmer edit section *** (Student.Registration Get end)
-                return result;
-            }
-            set
-            {
-                // *** Start programmer edit section *** (Student.Registration Set start)
-
-                // *** End programmer edit section *** (Student.Registration Set start)
-                this.fRegistration = value;
-                // *** Start programmer edit section *** (Student.Registration Set end)
-
-                // *** End programmer edit section *** (Student.Registration Set end)
             }
         }
         

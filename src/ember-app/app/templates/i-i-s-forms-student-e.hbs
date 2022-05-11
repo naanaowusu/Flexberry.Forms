@@ -64,22 +64,4 @@
     }}
     {{flexberry-validationmessage error=(v-get validationModel "gender" "message")}}
   </div>
-  <div class="field">
-    <label>{{t "forms.i-i-s-forms-student-e.registration-caption"}}</label>
-    {{flexberry-lookup
-      choose="showLookupDialog"
-      remove="removeLookupValue"
-      value=model.registration
-      displayAttributeName="courseType"
-      autocomplete=true
-      relationName="registration"
-      projection="RegistrationL"
-      title=(t "forms.i-i-s-forms-student-e.registration-caption")
-      readonly=readonly
-      componentName="registrationLookup"
-      class=(if (v-get validationModel "registration" "isInvalid") "error")
-      data-test-i-i-s-forms-student-e-registration=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationModel "registration" "message")}}
-  </div>
 </form>

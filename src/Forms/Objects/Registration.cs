@@ -30,16 +30,24 @@ namespace IIS.Forms
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("RegistrationE", new string[] {
             "CourseType as \'Course type\'",
-            "DateOfRegister as \'Date of register\'"})]
+            "DateOfRegister as \'Date of register\'",
+            "Course.Name",
+            "Student.Name"})]
     [View("RegistrationL", new string[] {
             "CourseType as \'Course type\'",
-            "DateOfRegister as \'Date of register\'"})]
+            "DateOfRegister as \'Date of register\'",
+            "Course.Name as \'Course\'",
+            "Student.Name as \'Student\'"})]
     public class Registration : ICSSoft.STORMNET.DataObject
     {
         
         private IIS.Forms.tCourse fCourseType;
         
         private System.DateTime fDateOfRegister;
+        
+        private IIS.Forms.Course fCourse;
+        
+        private IIS.Forms.Student fStudent;
         
         // *** Start programmer edit section *** (Registration CustomMembers)
 
@@ -105,6 +113,70 @@ namespace IIS.Forms
                 // *** Start programmer edit section *** (Registration.DateOfRegister Set end)
 
                 // *** End programmer edit section *** (Registration.DateOfRegister Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Registration.
+        /// </summary>
+        // *** Start programmer edit section *** (Registration.Course CustomAttributes)
+
+        // *** End programmer edit section *** (Registration.Course CustomAttributes)
+        [NotNull()]
+        public virtual IIS.Forms.Course Course
+        {
+            get
+            {
+                // *** Start programmer edit section *** (Registration.Course Get start)
+
+                // *** End programmer edit section *** (Registration.Course Get start)
+                IIS.Forms.Course result = this.fCourse;
+                // *** Start programmer edit section *** (Registration.Course Get end)
+
+                // *** End programmer edit section *** (Registration.Course Get end)
+                return result;
+            }
+            set
+            {
+                // *** Start programmer edit section *** (Registration.Course Set start)
+
+                // *** End programmer edit section *** (Registration.Course Set start)
+                this.fCourse = value;
+                // *** Start programmer edit section *** (Registration.Course Set end)
+
+                // *** End programmer edit section *** (Registration.Course Set end)
+            }
+        }
+        
+        /// <summary>
+        /// Registration.
+        /// </summary>
+        // *** Start programmer edit section *** (Registration.Student CustomAttributes)
+
+        // *** End programmer edit section *** (Registration.Student CustomAttributes)
+        [NotNull()]
+        public virtual IIS.Forms.Student Student
+        {
+            get
+            {
+                // *** Start programmer edit section *** (Registration.Student Get start)
+
+                // *** End programmer edit section *** (Registration.Student Get start)
+                IIS.Forms.Student result = this.fStudent;
+                // *** Start programmer edit section *** (Registration.Student Get end)
+
+                // *** End programmer edit section *** (Registration.Student Get end)
+                return result;
+            }
+            set
+            {
+                // *** Start programmer edit section *** (Registration.Student Set start)
+
+                // *** End programmer edit section *** (Registration.Student Set start)
+                this.fStudent = value;
+                // *** Start programmer edit section *** (Registration.Student Set end)
+
+                // *** End programmer edit section *** (Registration.Student Set end)
             }
         }
         

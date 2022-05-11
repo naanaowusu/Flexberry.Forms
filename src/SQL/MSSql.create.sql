@@ -14,8 +14,6 @@ CREATE TABLE [Student] (
 
 	 [Gender] VARCHAR(6)  NULL,
 
-	 [Registration_m0] UNIQUEIDENTIFIER  NOT NULL,
-
 	 PRIMARY KEY ([primaryKey]))
 
 
@@ -24,8 +22,6 @@ CREATE TABLE [Course] (
 	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
 
 	 [Name] VARCHAR(255)  NULL,
-
-	 [Registration_m0] UNIQUEIDENTIFIER  NOT NULL,
 
 	 PRIMARY KEY ([primaryKey]))
 
@@ -37,6 +33,10 @@ CREATE TABLE [Registration] (
 	 [CourseType] VARCHAR(18)  NULL,
 
 	 [DateOfRegister] DATETIME  NULL,
+
+	 [Course_m0] UNIQUEIDENTIFIER  NOT NULL,
+
+	 [Student_m0] UNIQUEIDENTIFIER  NOT NULL,
 
 	 PRIMARY KEY ([primaryKey]))
 
@@ -222,11 +222,11 @@ CREATE TABLE [ApplicationLog] (
 
 
 
- ALTER TABLE [Student] ADD CONSTRAINT [Student_FRegistration_0] FOREIGN KEY ([Registration_m0]) REFERENCES [Registration]
-CREATE INDEX Student_IRegistration_m0 on [Student] ([Registration_m0])
+ ALTER TABLE [Registration] ADD CONSTRAINT [Registration_FCourse_0] FOREIGN KEY ([Course_m0]) REFERENCES [Course]
+CREATE INDEX Registration_ICourse_m0 on [Registration] ([Course_m0])
 
- ALTER TABLE [Course] ADD CONSTRAINT [Course_FRegistration_0] FOREIGN KEY ([Registration_m0]) REFERENCES [Registration]
-CREATE INDEX Course_IRegistration_m0 on [Course] ([Registration_m0])
+ ALTER TABLE [Registration] ADD CONSTRAINT [Registration_FStudent_0] FOREIGN KEY ([Student_m0]) REFERENCES [Student]
+CREATE INDEX Registration_IStudent_m0 on [Registration] ([Student_m0])
 
  ALTER TABLE [STORMWEBSEARCH] ADD CONSTRAINT [STORMWEBSEARCH_FSTORMFILTERSETTING_0] FOREIGN KEY ([FilterSetting_m0]) REFERENCES [STORMFILTERSETTING]
 

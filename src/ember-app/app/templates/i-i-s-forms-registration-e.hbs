@@ -45,4 +45,24 @@
     }}
     {{flexberry-validationmessage error=(v-get validationModel "dateOfRegister" "message")}}
   </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.course.name
+      class=(if (v-get validationModel.course "name" "isInvalid") "error")
+      label=(t "forms.i-i-s-forms-registration-e.course.name-caption")
+      data-test-i-i-s-forms-registration-e-course-name=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.course "name" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.student.name
+      class=(if (v-get validationModel.student "name" "isInvalid") "error")
+      label=(t "forms.i-i-s-forms-registration-e.student.name-caption")
+      data-test-i-i-s-forms-registration-e-student-name=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.student "name" "message")}}
+  </div>
 </form>

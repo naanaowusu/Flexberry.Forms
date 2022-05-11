@@ -43,15 +43,7 @@
       "ordered": false
     }
   ],
-  "belongsTo": [
-    {
-      "polymorphic": false,
-      "presence": true,
-      "name": "registration",
-      "relatedTo": "i-i-s-forms-registration",
-      "inverse": null
-    }
-  ],
+  "belongsTo": [],
   "hasMany": [],
   "projections": [
     {
@@ -83,29 +75,7 @@
           "index": 3
         }
       ],
-      "belongsTo": [
-        {
-          "lookupValue": "CourseType",
-          "lookupValueField": "courseType",
-          "relationName": "Registration",
-          "belongsTo": [],
-          "hidden": false,
-          "attrs": [
-            {
-              "name": "courseType",
-              "caption": "Course type",
-              "hidden": true,
-              "index": 5
-            }
-          ],
-          "index": 4,
-          "type": "standard",
-          "caption": "Registration",
-          "name": "registration",
-          "relatedTo": "i-i-s-forms-registration",
-          "inverse": null
-        }
-      ],
+      "belongsTo": [],
       "hasMany": []
     },
     {
@@ -137,29 +107,7 @@
           "index": 3
         }
       ],
-      "belongsTo": [
-        {
-          "lookupValue": null,
-          "lookupValueField": null,
-          "relationName": "Registration",
-          "belongsTo": [],
-          "hidden": false,
-          "attrs": [
-            {
-              "name": "courseType",
-              "caption": "Course type",
-              "hidden": false,
-              "index": 4
-            }
-          ],
-          "index": -1,
-          "type": "default",
-          "caption": "Course type",
-          "name": "registration",
-          "relatedTo": "i-i-s-forms-registration",
-          "inverse": null
-        }
-      ],
+      "belongsTo": [],
       "hasMany": []
     }
   ],

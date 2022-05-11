@@ -30,20 +30,13 @@ namespace IIS.Forms
     [Caption("Name")]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("CourseE", new string[] {
-            "Name as \'Name\'",
-            "Registration as \'Registration\'",
-            "Registration.CourseType as \'Course type\'"}, Hidden=new string[] {
-            "Registration.CourseType"})]
-    [MasterViewDefineAttribute("CourseE", "Registration", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "CourseType")]
+            "Name as \'Name\'"})]
     [View("CourseL", new string[] {
-            "Name as \'Name\'",
-            "Registration.CourseType as \'Course type\'"})]
+            "Name as \'Name\'"})]
     public class Course : ICSSoft.STORMNET.DataObject
     {
         
         private string fName;
-        
-        private IIS.Forms.Registration fRegistration;
         
         // *** Start programmer edit section *** (Course CustomMembers)
 
@@ -79,38 +72,6 @@ namespace IIS.Forms
                 // *** Start programmer edit section *** (Course.Name Set end)
 
                 // *** End programmer edit section *** (Course.Name Set end)
-            }
-        }
-        
-        /// <summary>
-        /// Course.
-        /// </summary>
-        // *** Start programmer edit section *** (Course.Registration CustomAttributes)
-
-        // *** End programmer edit section *** (Course.Registration CustomAttributes)
-        [NotNull()]
-        public virtual IIS.Forms.Registration Registration
-        {
-            get
-            {
-                // *** Start programmer edit section *** (Course.Registration Get start)
-
-                // *** End programmer edit section *** (Course.Registration Get start)
-                IIS.Forms.Registration result = this.fRegistration;
-                // *** Start programmer edit section *** (Course.Registration Get end)
-
-                // *** End programmer edit section *** (Course.Registration Get end)
-                return result;
-            }
-            set
-            {
-                // *** Start programmer edit section *** (Course.Registration Set start)
-
-                // *** End programmer edit section *** (Course.Registration Set start)
-                this.fRegistration = value;
-                // *** Start programmer edit section *** (Course.Registration Set end)
-
-                // *** End programmer edit section *** (Course.Registration Set end)
             }
         }
         

@@ -9,14 +9,12 @@ CREATE TABLE Student (
  Surname VARCHAR(255) NULL,
  Age INT NULL,
  Gender VARCHAR(6) NULL,
- Registration_m0 UUID NOT NULL,
  PRIMARY KEY (primaryKey));
 
 
 CREATE TABLE Course (
  primaryKey UUID NOT NULL,
  Name VARCHAR(255) NULL,
- Registration_m0 UUID NOT NULL,
  PRIMARY KEY (primaryKey));
 
 
@@ -24,6 +22,8 @@ CREATE TABLE Registration (
  primaryKey UUID NOT NULL,
  CourseType VARCHAR(18) NULL,
  DateOfRegister TIMESTAMP(3) NULL,
+ Course_m0 UUID NOT NULL,
+ Student_m0 UUID NOT NULL,
  PRIMARY KEY (primaryKey));
 
 
@@ -131,11 +131,11 @@ CREATE TABLE ApplicationLog (
 
 
 
- ALTER TABLE Student ADD CONSTRAINT FKbb5f2c83bc1c1f0af02afe3cbf24ad0f4572809b FOREIGN KEY (Registration_m0) REFERENCES Registration; 
-CREATE INDEX Indexbb5f2c83bc1c1f0af02afe3cbf24ad0f4572809b on Student (Registration_m0); 
+ ALTER TABLE Registration ADD CONSTRAINT FK5b85b24dbc886c7aa15a53a373f525f42981e7c1 FOREIGN KEY (Course_m0) REFERENCES Course; 
+CREATE INDEX Index5b85b24dbc886c7aa15a53a373f525f42981e7c1 on Registration (Course_m0); 
 
- ALTER TABLE Course ADD CONSTRAINT FKdecc75b2616fe5270639bba8eca3a7180f2572bd FOREIGN KEY (Registration_m0) REFERENCES Registration; 
-CREATE INDEX Indexdecc75b2616fe5270639bba8eca3a7180f2572bd on Course (Registration_m0); 
+ ALTER TABLE Registration ADD CONSTRAINT FK0276aa86da954894e0762515d337c54b0f53456e FOREIGN KEY (Student_m0) REFERENCES Student; 
+CREATE INDEX Index0276aa86da954894e0762515d337c54b0f53456e on Registration (Student_m0); 
 
  ALTER TABLE STORMWEBSEARCH ADD CONSTRAINT FKc4378e39870eb056aec84088683297a01d2a6200 FOREIGN KEY (FilterSetting_m0) REFERENCES STORMFILTERSETTING; 
 
