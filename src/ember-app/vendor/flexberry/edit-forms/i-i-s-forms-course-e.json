@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Registration",
+      "projection": "RegistrationL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Course",
+  "name": "IISFormsCourseE",
+  "className": "CourseE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-forms-course",
+      "modelProjection": "CourseE"
+    }
+  ]
+}

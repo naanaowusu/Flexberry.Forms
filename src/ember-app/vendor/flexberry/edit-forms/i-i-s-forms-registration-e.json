@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Registration",
+  "name": "IISFormsRegistrationE",
+  "className": "RegistrationE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-forms-registration",
+      "modelProjection": "RegistrationE"
+    }
+  ]
+}

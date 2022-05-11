@@ -1,0 +1,36 @@
+﻿{
+  "applicationCaption": "Forms",
+  "applicationTitle": "Forms",
+  "items": [
+    {
+      "link": null,
+      "menuName": "forms",
+      "caption": "Forms",
+      "title": "Forms",
+      "children": [
+        {
+          "link": "i-i-s-forms-student-l",
+          "menuName": null,
+          "caption": "Student",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-forms-course-l",
+          "menuName": null,
+          "caption": "Course",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-forms-registration-l",
+          "menuName": null,
+          "caption": "Registration",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-forms-student-e",
+  "editForm": "i-i-s-forms-student-e",
+  "external": false,
+  "caption": "Student",
+  "name": "IISFormsStudentL",
+  "className": "StudentL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-forms-student",
+      "modelProjection": "StudentL"
+    }
+  ]
+}

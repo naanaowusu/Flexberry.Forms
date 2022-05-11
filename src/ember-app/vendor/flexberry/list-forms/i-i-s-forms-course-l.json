@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-forms-course-e",
+  "editForm": "i-i-s-forms-course-e",
+  "external": false,
+  "caption": "Course",
+  "name": "IISFormsCourseL",
+  "className": "CourseL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-forms-course",
+      "modelProjection": "CourseL"
+    }
+  ]
+}

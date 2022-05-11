@@ -1,0 +1,75 @@
+﻿{
+  "name": "IISFormsRegistration",
+  "modelName": "i-i-s-forms-registration",
+  "className": "Registration",
+  "nameSpace": "IIS.Forms",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "courseType",
+      "type": "i-i-s-forms-t-course",
+      "flexberryType": "tCourse",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "dateOfRegister",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "RegistrationE",
+      "modelName": "i-i-s-forms-registration",
+      "attrs": [
+        {
+          "name": "courseType",
+          "caption": "Course type",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "dateOfRegister",
+          "caption": "Date of register",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "RegistrationL",
+      "modelName": "i-i-s-forms-registration",
+      "attrs": [
+        {
+          "name": "courseType",
+          "caption": "Course type",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "dateOfRegister",
+          "caption": "Date of register",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

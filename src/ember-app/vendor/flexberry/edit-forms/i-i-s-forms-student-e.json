@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Registration",
+      "projection": "RegistrationL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Student",
+  "name": "IISFormsStudentE",
+  "className": "StudentE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-forms-student",
+      "modelProjection": "StudentE"
+    }
+  ]
+}

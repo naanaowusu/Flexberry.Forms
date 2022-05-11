@@ -1,0 +1,10 @@
+﻿{
+  "nameSpace": "IIS.Forms",
+  "className": "tCourse",
+  "enumObjects": {
+    "Programming": "Advanced Python",
+    "Mathematics": "Elective Maths",
+    "Economics": "Economics",
+    "Project": "Project Management"
+  }
+}

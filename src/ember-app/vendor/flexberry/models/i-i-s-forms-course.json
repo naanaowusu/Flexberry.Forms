@@ -1,0 +1,106 @@
+﻿{
+  "name": "IISFormsCourse",
+  "modelName": "i-i-s-forms-course",
+  "className": "Course",
+  "nameSpace": "IIS.Forms",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "registration",
+      "relatedTo": "i-i-s-forms-registration",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "CourseE",
+      "modelName": "i-i-s-forms-course",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "CourseType",
+          "lookupValueField": "courseType",
+          "relationName": "Registration",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "courseType",
+              "caption": "Course type",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Registration",
+          "name": "registration",
+          "relatedTo": "i-i-s-forms-registration",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "CourseL",
+      "modelName": "i-i-s-forms-course",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Registration",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "courseType",
+              "caption": "Course type",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Course type",
+          "name": "registration",
+          "relatedTo": "i-i-s-forms-registration",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
